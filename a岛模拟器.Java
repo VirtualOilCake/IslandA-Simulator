@@ -1,15 +1,17 @@
 import java.util.*;
 public class main {
+    //自定义区
+    static int times = 3;//自动生成回复的次数
+    static int cookieLength=7;//饼干长度
+    static String cookieForm=("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890");//饼干所包含的内容
+    static boolean responseCookie=true;// 是否显示回复的饼干
+    boolean responseTime=false;//是否显示回复时间(尚未完成)
     public static void main(String[] args) {
-        //自定义区
-        int times = 3;//自动生成回复的次数
-        boolean myCookie=false;//是否显示自己的饼干(尚未完成)
-        boolean responseCookie=false;// 是否显示回复的饼干(尚未完成)
-        boolean responseTime=false;//是否显示回复时间(尚未完成)
 /////////////////////////////////////////////////////////
         //初始化
         java.util.Scanner input = new java.util.Scanner(System.in);
-        String inputString = input.next();/*用户输入*/
+        String originalInput = input.next();/*用户输入*/
+        String inputString=originalInput.toLowerCase();//变为小写
         ArrayList output = new ArrayList();/*输出的list*/
 /////////////////List中的默认内容////////////////////////
     output.add("( ﾟ∀。)");
@@ -18,26 +20,24 @@ public class main {
     output.add("(ﾟДﾟ≡ﾟДﾟ)");
     output.add("⊂彡☆))д`)");
     output.add("(　^ω^)");
-    output.add("(　^ω^)您说您马呢");
+    output.add("……");
     output.add("致");
     output.add("摩多摩多");
     output.add(inputString);
 /////////////////////////////////////////////////////////
-//关键字语句： inputString.indexOf("关键字") != -1
+//关键字语句： inputString.contains("关键字")
         //bog梗关键字
         boolean bog=(
-inputString.indexOf("bili") != -1||
-inputString.indexOf("Bili") != -1||
-inputString.indexOf("pili") != -1||
-inputString.indexOf("xili") != -1||
-inputString.indexOf("批站") != -1||
-inputString.indexOf("哔哩") != -1||
-inputString.indexOf("b站") != -1||
-inputString.indexOf("B站") != -1||
-inputString.indexOf("干杯") != -1||
-inputString.indexOf("( ゜- ゜)つロ ") != -1||
-inputString.indexOf("ビリ") != -1||
-inputString.indexOf("乾杯") != -1);
+inputString.contains("bili") ||
+inputString.contains("pili") ||
+inputString.contains("xili") ||
+inputString.contains("批站") ||
+inputString.contains("哔哩") ||
+inputString.contains("b站") ||
+inputString.contains("干杯")||
+inputString.contains("( ゜- ゜)つロ ") ||
+inputString.contains("ビリ") ||
+inputString.contains("乾杯"));
         //二次元关键字
         boolean ecy=(
 inputString.indexOf("二次元") != -1||
@@ -73,6 +73,7 @@ inputString.indexOf("今天我") != -1||
 inputString.indexOf("σ") != -1||
 inputString.indexOf("来蛤我") != -1||
 inputString.indexOf("( ´_ゝ`)") != -1||
+inputString.indexOf("( ・_ゝ・)") != -1||
 inputString.indexOf("我竟然") != -1);
         //致癌物检测
 boolean zaw=(
@@ -213,7 +214,7 @@ if(gf)
 }
 if(jgg)
 {
-    for(int jggTimes=0;jggTimes<5;jggTimes++)
+    for(int jggTimes=0;jggTimes<10;jggTimes++)
     {
         output.add("举高高(ノﾟ∀ﾟ)ノ");
         output.add("举高高(ノﾟ∀ﾟ)ノ");
@@ -224,17 +225,34 @@ if(!(ecy||xp1||xp2||xp3||xp4||hhh||japanese||loli))
 {
 output.add("你把大家叫出来就是为了这一点事情啊.jpg");
 output.add("新人石雕三月(つд⊂)");
+output.add("闭嘴石雕");
 output.add("真是什么人都可以上岛了");
 }
+//////////////////////////////////////
 
 
 
         //输出
 
         for (int i = 0; i < times; i++) {
+            if(responseCookie)
+            {
+                System.out.print(cookieGenerator());
+            }
             System.out.println("---------------------");
             System.out.println(output.get((int) (Math.random() * output.size())));
         }
 
     }
+    static String cookieGenerator()
+    {
+        String tempCookie="";
+        for(int i=0;i<cookieLength;i++)
+        {
+            int temp=(int) (Math.random()*cookieForm.length());
+            tempCookie=tempCookie+(cookieForm.substring(temp,temp+1));
+        }
+        return tempCookie;
+    }
+
 }
