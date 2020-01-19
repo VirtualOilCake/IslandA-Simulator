@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.manoil</groupId>
+    <artifactId>IslandA-Simulator</artifactId>
+    <version>0.0.1</version>
+    <name>A岛模拟器</name>
+    <description>是否因为自己法的串没有人回复而沮丧？ 现在，你可以体验A岛风格的自动回复了！</description>
+
+    <!-- 项目属性配置 -->
+    <properties>
+        <!-- 使用 jdk 1.8 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <!-- 编码使用 UTF-8 -->
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <!-- 项目依赖 -->
+    <dependencies>
+
+    </dependencies>
+
+</project>
