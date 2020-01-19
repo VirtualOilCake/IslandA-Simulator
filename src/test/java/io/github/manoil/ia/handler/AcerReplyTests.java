@@ -1,6 +1,5 @@
 package io.github.manoil.ia.handler;
 
-import com.github.manoil.ia.handler.DefaultAcerReply;
 import org.junit.Test;
 
 public class AcerReplyTests {

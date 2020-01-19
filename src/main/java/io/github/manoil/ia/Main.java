@@ -1,4 +1,4 @@
-package com.github.manoil.ia;
+package io.github.manoil.ia;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.github.manoil.ia.handler;
+package io.github.manoil.ia.handler;
 
 import java.util.Random;
 

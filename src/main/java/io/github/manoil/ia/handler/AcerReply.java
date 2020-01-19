@@ -1,4 +1,4 @@
-package com.github.manoil.ia.handler;
+package io.github.manoil.ia.handler;
 
 /**
  * 此接口表示一个正在网上冲浪的 Acer,
