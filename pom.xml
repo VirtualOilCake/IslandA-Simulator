@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.manoil</groupId>
     <artifactId>IslandA-Simulator</artifactId>
-    <version>0.0.1</version>
+    <version>1.1.0</version>
     <name>A岛模拟器</name>
     <description>是否因为自己法的串没有人回复而沮丧？ 现在，你可以体验A岛风格的自动回复了！</description>
 
