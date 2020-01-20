@@ -12,10 +12,10 @@ public interface AcerReply {
      * 命中 G 点则会触发回复,
      * 没有命中 G 点则不触发回复
      *
-     * @param keyword 串关键字,可以输入整个串
+     * @param thread 串内容,或需要用来检测的部分内容
      * @return 如果命中, 则返回true, 没有命中则返回false
      */
-    boolean hitGPoint(String keyword);
+    boolean hitGPoint(String thread);
 
     /**
      * 回复一个串
